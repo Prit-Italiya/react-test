@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot renders 1`] = `
+<div
+  className="bootstap-layout"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="root-component"
+    >
+      <canvas
+        onMouseDown={[Function]}
+        style={
+          Object {
+            "height": "100%",
+            "left": 0,
+            "position": "absolute",
+            "top": 0,
+            "width": "100%",
+            "zIndex": -1,
+          }
+        }
+      />
+    </div>
+  </div>
+</div>
+`;

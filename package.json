@@ -1,5 +1,5 @@
 {
-  "name": "react-base-app",
+  "name": "react-test",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -24,13 +24,25 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test-watch": "jest --watchAll",
+    "coverage": "jest --collectCoverage",
     "eject": "react-scripts eject",
     "build-css": "node-sass --include-path scss src/assets/default.scss   src/assets/default.css",
     "watch-css": "nodemon -e scss -x \"npm run build-css\""
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "plugins": [
+    [
+      "@babel/plugin-transform-react-jsx"
+    ]
+  ],
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
   },
   "browserslist": {
     "production": [
@@ -45,7 +57,12 @@
     ]
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.10.4",
+    "@babel/preset-react": "^7.10.4",
     "babel": "^6.23.0",
+    "babel-jest": "^26.1.0",
+    "jest": "^26.1.0",
+    "react-test-renderer": "^16.13.1",
     "bootstrap": "^4.5.0",
     "css-loader": "^3.4.2",
     "node-sass": "^4.14.1",

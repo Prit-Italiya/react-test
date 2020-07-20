@@ -1,9 +1,12 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import renderer from 'react-test-renderer';
+
+import {Provider} from 'react-redux';
+import store from "./store/store";
 import App from './App';
 
-test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+test('snapshot renders', () => {
+    const component = renderer.create(<Provider store={store}><App/></Provider>);
+    let tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
 });
