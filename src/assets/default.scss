@@ -1,0 +1,11 @@
+@import 'abstracts/variables';
+@import 'base/base';
+@import 'base/typography';
+@import '../../node_modules/bootstrap/scss/bootstrap';
+//Componentes
+@import '../Components/Welcome/style';
+
+//Shared components
+@import '../shared/components/Spinner/style';
+@import '../shared/components/Checkbox/style';
+@import '../shared/components/Table/style';
